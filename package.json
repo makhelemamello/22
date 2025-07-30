@@ -1,0 +1,29 @@
+{
+  "name": "student-portfolio",
+  "version": "1.0.0",
+  "description": "A modern student portfolio website with Netlify CMS integration",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve . -p 3000",
+    "dev": "npx serve . -p 3000",
+    "build": "echo 'No build step required for static site'",
+    "deploy": "netlify deploy --prod"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "student",
+    "netlify-cms",
+    "static-site"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/student-portfolio.git"
+  },
+  "homepage": "https://yourusername.github.io/student-portfolio"
+}
