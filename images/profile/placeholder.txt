@@ -1,0 +1,8 @@
+/* Placeholder for the actual profile image */
+/* 
+To add the real profile image:
+1. Save the professional photo from the attachment as 'mamello-profile.jpg'
+2. Place it in this folder: /Users/bobbydhir/final2/images/profile/
+3. The image should be high quality (600x600px or larger)
+4. The website will automatically use it once saved with the correct filename
+*/

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Testing Domain Configuration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .test-image {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 2px solid #ccc;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Domain Configuration Test</h1>
+    <div class="test-section">
+        <h2>Viewport Test</h2>
+        <p>This text should not appear enlarged or zoomed. The viewport should be properly set.</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Image Scaling Test</h2>
+        <div class="test-image" style="background: linear-gradient(45deg, #f0f0f0, #ddd); height: 200px; display: flex; align-items: center; justify-content: center;">
+            <span>Test Image Container (300px max)</span>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Responsive Test</h2>
+        <p>Resize your browser window. This content should adapt properly without horizontal scrolling.</p>
+    </div>
+    
+    <script>
+        console.log('Domain test loaded successfully');
+        console.log('Viewport width:', window.innerWidth);
+        console.log('Device pixel ratio:', window.devicePixelRatio);
+    </script>
+</body>
+</html>

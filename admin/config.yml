@@ -1,0 +1,84 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "general"
+        label: "General Settings"
+        file: "_data/settings.yml"
+        fields:
+          - { label: "Site Title", name: "site_title", widget: "string", default: "Student Portfolio" }
+          - { label: "Site Description", name: "site_description", widget: "text" }
+          - { label: "Your Name", name: "name", widget: "string" }
+          - { label: "Job Title", name: "job_title", widget: "string", default: "Public Health Leader & PhD Researcher" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
+          - { label: "GitHub URL", name: "github", widget: "string", required: false }
+          - { label: "Profile Image", name: "profile_image", widget: "image", required: false }
+          
+  - name: "about"
+    label: "About Section"
+    files:
+      - name: "about"
+        label: "About Me"
+        file: "_data/about.yml"
+        fields:
+          - { label: "About Text Paragraph 1", name: "paragraph_1", widget: "text" }
+          - { label: "About Text Paragraph 2", name: "paragraph_2", widget: "text" }
+          - { label: "Projects Completed", name: "projects_count", widget: "number", default: 15 }
+          - { label: "Years Learning", name: "years_learning", widget: "number", default: 3 }
+          - { label: "Technologies Used", name: "technologies_count", widget: "number", default: 5 }
+
+  - name: "skills"
+    label: "Skills"
+    files:
+      - name: "skills"
+        label: "Skills & Technologies"
+        file: "_data/skills.yml"
+        fields:
+          - label: "Frontend Skills"
+            name: "frontend"
+            widget: "list"
+            default: ["HTML5", "CSS3", "JavaScript", "React", "Vue.js"]
+          - label: "Backend Skills"
+            name: "backend"
+            widget: "list"
+            default: ["Node.js", "Python", "Java", "Express.js", "MongoDB"]
+          - label: "Tools & Others"
+            name: "tools"
+            widget: "list"
+            default: ["Git", "Docker", "AWS", "Figma", "VS Code"]
+
+  - name: "projects"
+    label: "Projects"
+    folder: "_projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Technologies", name: "technologies", widget: "list" }
+      - { label: "Live Demo URL", name: "demo_url", widget: "string", required: false }
+      - { label: "GitHub URL", name: "github_url", widget: "string", required: false }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Order", name: "order", widget: "number", default: 1 }
+
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
